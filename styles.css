@@ -13,7 +13,19 @@ html {
 }
 
 body {
+  background: -webkit-gradient(linear, left top, right bottom, from(#7541c8), to(#19212e));
+  background: linear-gradient(to bottom right, #7541c8, #19212e);
+  height: 100vh;
+}
+
+main {
   background-color: #ecf2f8;
+  padding: 8rem 5rem;
+  max-width: 85rem;
+  max-height: auto;
+  margin: 8rem auto;
+  -webkit-box-shadow: 12px 12px 15px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 12px 12px 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 section {
@@ -24,26 +36,43 @@ section {
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   gap: 1.5rem;
-  padding: 1.5rem;
 }
 
 .card {
   font-size: 13px;
   font-weight: 500;
+  font-family: "Barlow Semi Condensed", sans-serif;
   border-radius: 10px;
+  -webkit-box-shadow: 12px 12px 15px 5px rgba(168, 168, 168, 0.2);
+          box-shadow: 12px 12px 15px 5px rgba(168, 168, 168, 0.2);
+  padding: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(auto, 2fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(auto, 2fr));
+  gap: 1rem;
 }
 
-.card img {
+.card figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card figure img {
   border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1.4rem;
 }
 
-.card h2 {
-  color: red;
+.card figure h2 {
+  font-size: 1rem;
 }
 
-.card span {
-  display: block;
-  color: #cfcfcf;
+.card figure span {
+  display: inline-block;
+  color: #b8b6b6;
 }
 
 .card1 {
@@ -54,7 +83,15 @@ section {
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
   background-color: #7541c8;
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: right 20% top 0%;
+  background-size: 7.8rem;
   color: #ffffff;
+}
+
+.card1 img {
+  border: 2px solid purple;
 }
 
 .card2 {
@@ -76,6 +113,7 @@ section {
   -ms-grid-column-span: 1;
   grid-column: 1 / span 1;
   background-color: #ffffff;
+  color: #48556a;
 }
 
 .card4 {
@@ -89,6 +127,10 @@ section {
   color: #ffffff;
 }
 
+.card4 img {
+  border: 2px solid purple;
+}
+
 .card5 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -97,5 +139,17 @@ section {
   -ms-grid-column-span: 1;
   grid-column: 4 / span 1;
   background-color: #ffffff;
+  color: #48556a;
+}
+
+.card h1 {
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.card p {
+  color: #b8b6b6;
+  font-weight: 600;
+  line-height: 1.2rem;
 }
 /*# sourceMappingURL=styles.css.map */
